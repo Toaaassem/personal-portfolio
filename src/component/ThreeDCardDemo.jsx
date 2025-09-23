@@ -19,7 +19,7 @@ const cardData = [
     description:
       "Professional Portfolio Showcasing Diverse Works and Expertise",
     imageUrl: "/images/image1.png",
-    link: "https://twitter.com/mannupaaji",
+    link: "https://github.com/Toaaassem/personal-portfolio",
     techStack: ["FaReact", "SiTailwindcss", "SiJavascript"],
   },
   {
