@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+
+@theme inline {
+  --shadow-input:
+    0px 2px 3px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+}
+
+
+html, body {
+  overflow-x: hidden;
+  background-color: #060606;
+}
+
+/* Apply this to the container with overflow */
+.custom-scrollbar {
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: 400px; /* Example height */
+}
+
+/* Customize the scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #232222; /* Color of the track */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the thumb */
+  border-radius: 10px; /* Rounded corners */
+  border: 2px solid #060606; /* Optional: Add a border around the thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Change color on hover */
+}
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  .animate-marquee {
+    display: flex;
+    animation: marquee 10s linear infinite;
+  }
+  @keyframes scrollIcons {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
