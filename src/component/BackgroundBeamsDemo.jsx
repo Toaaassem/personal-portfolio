@@ -24,7 +24,7 @@ export function BackgroundBeamsDemo() {
   className="relative z-50 inline-flex h-10 w-50 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
   onClick={() =>
     window.open(
-      "https://drive.google.com/file/d/1yK3VGN94w-cW-_UL8BEq3YmFofsia4pu/view?usp=sharing",
+      "\Toqa-Assem-UCV.pdf",
       "_blank"
     )
   }
