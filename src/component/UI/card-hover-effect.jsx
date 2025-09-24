@@ -12,7 +12,7 @@ export const HoverEffect = ({
   return (
     
     < div className="" id="services">
-    <div className="max-w-7xl mx-auto px-8 min-h-screen"> 
+    <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 min-h-screen"> 
       <div className="text-center  mb-5  bg-clip-text text-transparent bg-gradient-to-b from-[#87CEEB] to-[#ff6fa0] text-center font-sans font-bold">
         <h1 className="text-4xl font-bold mb-2 pt-12">My Services</h1>
       </div>
