@@ -16,7 +16,7 @@ export const HoverEffect = ({
       <div className="text-center  mb-5  bg-clip-text text-transparent bg-gradient-to-b from-[#87CEEB] to-[#ff6fa0] text-center font-sans font-bold">
         <h1 className="text-4xl font-bold mb-2 pt-12">My Services</h1>
       </div>
-    <div className={cn("grid  md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-2  py-10 ", className)}>
+    <div className={cn("grid grid-cols-2  md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-2  py-10 ", className)}>
       {items.map((item, idx) => (
         <a
           href={item?.link}
@@ -59,7 +59,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-pink-700/50 duration-300 relative z-20",
+        "rounded-2xl h-full w-full min-h-[220px] p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-pink-700/50 duration-300 relative z-20",
         className
       )}>
       <div className="relative z-50">
@@ -84,7 +84,7 @@ export const CardDescription = ({
 }) => {
   return (
     <p
-      className={cn("mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm", className)}>
+      className={cn("mt-2 text-zinc-400 tracking-wide leading-snug text-sm", className)}>
       {children}
     </p>
   );

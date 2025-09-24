@@ -109,7 +109,7 @@ const ThreeDCardDemo = () => {
                     translateZ={20}
                     as="a"
                     href={card.link}
-                    target="__blank"
+                    target="_blank"
                     className="px-4 py-2 rounded-xl text-xs font-bold dark:text-white"
                   >
                     Dive In →
