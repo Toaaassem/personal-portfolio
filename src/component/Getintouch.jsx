@@ -15,6 +15,7 @@ function Getintouch() {
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState(null); // ✅ success / error / null
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -25,34 +26,52 @@ function Getintouch() {
 
     emailjs
       .send(
-        "service_uann7oc", // ✅ service ID
-        "template_19japm3", // ✅ template ID
+        "service_uann7oc",
+        "template_19japm3",
         {
           name: formData.name,
           email: formData.email,
           message: formData.message,
         },
-        "rFdOAJYDzHe1Z7lXd" // ✅ public key
+        "rFdOAJYDzHe1Z7lXd"
       )
       .then(
         (result) => {
           console.log("Message sent ✅", result.text);
-          alert("Message sent successfully!");
+          setStatus("success");
+          setFormData({ name: "", email: "", message: "" }); // clear form
+          setTimeout(() => setStatus(null), 4000); // auto-hide
         },
         (error) => {
           console.log("Failed ❌", error.text);
-          alert("Failed to send message. Try again.");
+          setStatus("error");
+          setTimeout(() => setStatus(null), 4000);
         }
       );
   };
 
   return (
-    <div className="flex flex-col items-center py-12 bg-gradient-to-r from-zinc-900 via-black to-zinc-900" id="contact">
+    <div
+      className="flex flex-col items-center py-12 bg-gradient-to-r from-zinc-900 via-black to-zinc-900"
+      id="contact"
+    >
       {/* Form Box */}
       <div className="w-full max-w-md sm:max-w-lg lg:max-w-2xl bg-zinc-900 p-8 sm:p-10 rounded-2xl shadow-xl">
         <h2 className="text-3xl font-bold text-white mb-6 text-center">
           Get in Touch
         </h2>
+
+        {/* Status Message */}
+        {status === "success" && (
+          <div className="mb-4 p-3 rounded-lg bg-green-600 text-white text-center">
+            ✅ Message sent successfully!
+          </div>
+        )}
+        {status === "error" && (
+          <div className="mb-4 p-3 rounded-lg bg-red-600 text-white text-center">
+            ❌ Failed to send message. Please try again.
+          </div>
+        )}
 
         {/* Form */}
         <form onSubmit={handleSubmit}>
@@ -134,10 +153,9 @@ function Getintouch() {
       </div>
 
       <hr className="w-3/4 border-t border-gray-700 my-8" />
-<p className="text-neutral-100 text-sm text-center">
-  © {new Date().getFullYear()} Toaa Assem. All Rights Reserved.
-</p>
-
+      <p className="text-neutral-100 text-sm text-center">
+        © {new Date().getFullYear()} Toaa Assem. All Rights Reserved.
+      </p>
     </div>
   );
 }
