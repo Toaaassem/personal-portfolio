@@ -79,11 +79,11 @@ const ThreeDCardDemo = () => {
             <CardContainer className="inter-var">
               <CardBody
                 className="flex flex-col justify-between 
-    bg-gray-50 dark:bg-black text-black dark:text-white
-    relative group/card 
-    dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] 
-    dark:border-white/[0.2] border-black/[0.1] 
-    w-full h-auto h-[500px] rounded-xl p-6 border"
+  bg-black text-white
+  relative group/card 
+  hover:shadow-2xl hover:shadow-emerald-500/[0.1] 
+  border border-white/[0.2] 
+  w-full h-[500px] rounded-xl p-6"
               >
                 <div>
                   <CardItem
